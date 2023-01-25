@@ -1,3 +1,6 @@
 /.direnv/
 /.terraform/
 variables.tfvars
+/*.tfstate
+/terraform.tfstate.backup
+/.temp/
