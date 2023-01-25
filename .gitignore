@@ -4,3 +4,4 @@ variables.tfvars
 /*.tfstate
 /terraform.tfstate.backup
 /.temp/
+/.terraform.tfstate.lock.info

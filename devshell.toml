@@ -5,9 +5,18 @@ help = "Per project developer environments"
 
 [[commands]]
 package = "terraform"
-help = "yep"
 name = "tf"
 
 [[commands]]
 package = "emacs"
-help = "Editor"
+
+[[commands]]
+package = "kubectl"
+name = "k"
+
+[[commands]]
+package = "linkerd"
+
+[[env]]
+name = "KUBECONFIG"
+value = "./.temp/kubeconfig"
