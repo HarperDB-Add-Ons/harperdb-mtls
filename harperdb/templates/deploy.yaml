@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: harperdb
+  namespace: harperdb
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: harperdb
+  template:
+    metadata:
+      labels:
+        app: harperdb
+    spec:
+      containers:
+        - name: harperdb
+          image: harperdb/harperdb
+          env:
+            - name: CLUSTERING_NODENAME
+              value: { { randAlphaNum 5 } }
+          envFrom:
+            - secretRef:
+                name: harperdb
